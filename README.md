@@ -1,3 +1,42 @@
+
+
+Bakendas sukurtas su Java.
+Frontendo projektas pradetas kurti su React, taciau nesuspejau rasyti koda. Sukuriau tik projekta.
+Backende inicijota H2 duomenu baze.
+
+Sukurtas dvi lenteles su knygu sarasu (book) ir knygu kategorijomis (booktype)
+
+Backendas Java projektas importojamas i eclipse kaip maven projektas.
+Reaktas atidaromas pvz su Visual Studio Code ir paleidziamas su terminale npm start.
+
+
+# Getting Started
+
+### Reference Documentation
+For further reference, please consider the following sections:
+
+* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
+* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.7.2-SNAPSHOT/maven-plugin/reference/html/)
+* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.7.2-SNAPSHOT/maven-plugin/reference/html/#build-image)
+* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/2.7.2-SNAPSHOT/reference/htmlsingle/#data.sql.jpa-and-spring-data)
+* [Spring Web](https://docs.spring.io/spring-boot/docs/2.7.2-SNAPSHOT/reference/htmlsingle/#web)
+* [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/2.7.2-SNAPSHOT/reference/htmlsingle/#using.devtools)
+* [Spring Security](https://docs.spring.io/spring-boot/docs/2.7.2-SNAPSHOT/reference/htmlsingle/#web.security)
+* [Validation](https://docs.spring.io/spring-boot/docs/2.7.2-SNAPSHOT/reference/htmlsingle/#io.validation)
+
+### Guides
+The following guides illustrate how to use some features concretely:
+
+* [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
+* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
+* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
+* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
+* [Securing a Web Application](https://spring.io/guides/gs/securing-web/)
+* [Spring Boot and OAuth2](https://spring.io/guides/tutorials/spring-boot-oauth2/)
+* [Authenticating a User with LDAP](https://spring.io/guides/gs/authenticating-ldap/)
+* [Validation](https://spring.io/guides/gs/validating-form-input/)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -16,15 +55,15 @@ npm install react-router-dom@5
  y
 
    Resources
-  http://localhost:8000/films
+  http://localhost:8000/books
 
   Home
   http://localhost:8000
 
-  /films      GET       fetch all films
-  /films/{id} GET       fetch single film
-  /films POST ADD       new film
-  /films/{id} DELETE    delete film
+  /books      GET       fetch all films
+  /books/{id} GET       fetch single film
+  /books POST ADD       new film
+  /books/{id} DELETE    delete film
 
 ### `npm start`
 
