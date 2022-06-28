@@ -38,37 +38,37 @@ public class BookController {
 	}
 
 	@GetMapping("/{id}")
-	public Book getFilm(@PathVariable Long id) {
+	public Book getBook(@PathVariable Long id) {
 		return bookRepo.findById(id).get();
 	}
 
 	@PostMapping
-	public Book postFilm(@RequestBody BookRequest filmRequest) {
+	public Book postFilm(@RequestBody BookRequest bookRequest) {
 		Book book = new Book();
 		book.setTitle(bookRequest.getTitle());
 		book.setStoryline(bookRequest.getStoryline());
-		BookType bookType = producerRepo.findProducerByName(filmRequest.getProducerName()).orElseThrow();
-		film.setProducer(producer);
-		return filmRepo.save(film);
+		BookType bookType = bookTypeRepo.findBookTypeByName(bookRequest.getBookTypeName()).orElseThrow();
+		book.setBookType(bookType);
+		return bookRepo.save(book);
 	}
 
 	@DeleteMapping("/{id}")
 	
-	public void deleteFilm(@PathVariable Long id) {
-		filmRepo.deleteById(id);
+	public void deleteBook(@PathVariable Long id) {
+		bookRepo.deleteById(id);
 	}
 	
 //	ResponseEntity
 	@PutMapping("/{id}")
-	public ResponseEntity<Film> updateFilms(@PathVariable Long id, @RequestBody FilmRequest filmDetails) {
-		Film film = filmRepo.findById(id).orElseThrow() ;
+	public ResponseEntity<Book> updateBooks(@PathVariable Long id, @RequestBody BookRequest bookDetails) {
+		Book book = bookRepo.findById(id).orElseThrow() ;
 	
-		film.setTitle(filmDetails.getTitle());
-		film.setStoryline(filmDetails.getStoryline());
-		Producer producer = producerRepo.findProducerByName(filmDetails.getProducerName()).orElseThrow();
-		film.setProducer(producer);
+		book.setTitle(bookDetails.getTitle());
+		book.setStoryline(bookDetails.getStoryline());
+		BookType bookType = bookTypeRepo.findProducerByName(bookDetails.getBookTypeName()).orElseThrow();
+		book.setBookType(bookType);
 		
-		final Film updatedFilm = filmRepo.save(film);
-        return ResponseEntity.ok(updatedFilm);
+		final Book updatedFilm = bookRepo.save(book);
+        return ResponseEntity.ok(updatedBook);
 	}
 }
