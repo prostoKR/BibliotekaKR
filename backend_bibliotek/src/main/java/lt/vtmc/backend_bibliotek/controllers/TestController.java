@@ -1,4 +1,4 @@
-package lt.vtmc.backend_bibliotek;
+package lt.vtmc.backend_bibliotek.controllers;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;

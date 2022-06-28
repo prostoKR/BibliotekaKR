@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 
 import lt.vtmc.backend_bibliotek.models.ERole;
 import lt.vtmc.backend_bibliotek.models.Role;
-import lt.vtmc.backend_bibliotek.Repository.RoleRepository;
+import lt.vtmc.backend_bibliotek.repository.RoleRepository;
 
 @SpringBootApplication
 public class BackendBibliotekApplication{
